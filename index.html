@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/all.min.css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css">
+  <title>Sign up</title>
+  <link rel="icon" href="images/welcome (2).png">
+  <style>
+    .container{
+      position: relative;
+      background: linear-gradient(rgba(56, 56, 56, 0.2), rgba(56, 56, 56, 0.2)), url(images/welcome\ \(2\).png);
+      background-repeat: no-repeat;
+      height: 90vh;
+      color: #EBD1B2;
+    } 
+    #logIn , #signIn {
+     height: 75vh;
+     display: none;
+     background-color: #cacaca19;
+    }
+    #signIn img , #logIn img {
+     width: 100%;
+     max-height: 75vh;
+     margin-left: 0;
+     }
+     h2 , h4{
+      font-family: "Cinzel Decorative", serif;
+     }
+  </style>
+ </head>
+ <body>
+  <div class="container m-auto w-75 text-center align-items-center my-3 p-3">
+    <div id="contentContainer" class="h-100 m-auto justify-content-center align-items-center d-flex flex-column">
+      <h2>Welcome</h2>
+      <h4>Ready to discover magic?</h4>
+      <button onclick="showSignIn()" id="startbtn"  class="btn btn-outline-light">Start now</button>
+    
+    </div>
+     <div id="signIn" class="row w-100 m-auto my-3 rounded shadow-lg text-center">
+      <div class="signIncontainer d-flex ">
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
+          <div class="img">
+            <img src="images/sign.png">
+          </div>
+        </div>
+        <div class="inputs my-auto col-md-8">
+          <input required id="Name" type="text" class="form-control m-2" placeholder="Enter your name">
+          <span id="nameError" class="error"></span>
+          <input required id="email" type="email" class="form-control m-2" placeholder="Enter your email">
+          <span id="emailError" class="error"></span>
+          <input required id="pass" type="password" class="form-control m-2" placeholder="Enter your password">
+          <span id="passwordError" class="error"></span>
+          <br>
+          <div class="agree d-flex">
+            <input required id="agree" type="checkbox" class="form-check-input m-2">
+            <label for="agree" class="form-check-label">I agree to the terms and conditions</label>
+          </div>
+          <button id="signInBtn" class="btn btn-light my-3 active">Sign up</button>
+          <p>Already have an account?</p>
+          <button onclick="showLogIn()" class="btn btn-outline-light">Log In</button>
+        </div>
+      </div>
+    </div>
+    <!-- ---log in starts here--- -->
+    <div  id="logIn" class="row w-100 m-auto my-3  rounded shadow-lg text-center">
+     <div class="logInContainer d-flex">
+      <div class="inputs col-md-8 m-auto">
+        <input id="emailLog" type="email" placeholder="Enter your email" class="form-control m-2">
+        <input id="passwordLog" type="password" placeholder="Enter your password" class="form-control m-2">
+        <button onclick="login()" class="btn btn-light my-3 active">Log in</button>
+         <p>Don’t have an account?</p>
+         <button onclick="showSignIn()" class="btn btn-outline-light">Sign up</button>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center align-items-end">
+        <div class="img">
+          <img src="images/log (1).png">
+        </div>
+      </div>
+    </div>
+  
+     </div>
+     
+  </div>
+  
+  <div id="alert">
+  </div>
+  
+    <script src="js/main.js">
+   </script>
+ </body>
+</html>
